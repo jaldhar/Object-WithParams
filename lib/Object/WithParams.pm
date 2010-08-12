@@ -79,7 +79,9 @@ Deletes all the extent parameters.  Does not return anything.
 sub clear {
     my ($self) = @_;
 
-    $self = {};
+    foreach my $param (keys %{$self}) {
+        delete $self->{$param};
+    }
 
     return;
 }

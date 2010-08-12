@@ -40,11 +40,8 @@ is_deeply([ sort $thingy->param() ], [ sort qw/ color numbers /],
 
 is($doodad->param('color'), 'black', 'clone has param after delete in orig');
 
-TODO: {
-local $TODO = q{Doesn't work yet};
 $doodad->clear;
 is_deeply([ sort $doodad->param() ], [], 'parameters cleared');
-}
 
 my $param_hash = {
     color    => 'black', 
