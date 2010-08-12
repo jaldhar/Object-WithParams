@@ -7,8 +7,11 @@ my $builder = Module::Build->new(
     license             => 'perl',
     dist_author         => q{Jaldhar H. Vyas <jaldhar@braincells.com>},
     dist_version_from   => 'lib/Object/WithParams.pm',
-    build_requires => {
+    build_requires      => {
         'Test::More' => 0,
+    },
+    requires            => {
+        'perl'       => 5.006,
     },
     add_to_cleanup      => [ 'Object-WithParams-*' ],
     create_makefile_pl  => 'small',

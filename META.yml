@@ -16,6 +16,8 @@ provides:
   Object::WithParams:
     file: lib/Object/WithParams.pm
     version: 0.1
+requires:
+  perl: 5.006
 resources:
   license: http://dev.perl.org/licenses/
 version: 0.1
