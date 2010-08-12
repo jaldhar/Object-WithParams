@@ -79,7 +79,7 @@ $thingy->clear();
 sub clear {
     my ($self) = @_;
 
-    foreach my $param (keys %{$self}) {
+    foreach my $param ( keys %{$self} ) {
         delete $self->{$param};
     }
 
