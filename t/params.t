@@ -4,7 +4,7 @@
 use strict;
 use warnings;
 use English qw( -no_match_vars );
-use Test::More tests => 14;
+use Test::More tests => 15;
 use Object::WithParams;
 
 my $thingy = Object::WithParams->new;
@@ -55,6 +55,8 @@ is_deeply([ sort $doodad->param ], [ sort qw/ color letters numbers /],
 $thingy->param(color => &return_param);
 is($thingy->param('color'), 'white', 'coderef parameter get/set');
 
+eval { $thingy->param('veni', 'vidi', 'vici'); };
+isnt($EVAL_ERROR, q{}, 'croaked on odd number of args');
 
 sub return_param {
 
