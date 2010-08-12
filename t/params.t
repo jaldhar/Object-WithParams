@@ -52,11 +52,8 @@ $doodad->param($param_hash);
 is_deeply([ sort $doodad->param ], [ sort qw/ color letters numbers /],
     'set from hashref');
 
-TODO: {
-local $TODO = q{Doesn't work yet};
-$thingy->param(colors => \&return_param);
+$thingy->param(colors => &return_param);
 is($thingy->param('colors'), 'white', 'coderef parameter get/set');
-}
 
 
 sub return_param {
