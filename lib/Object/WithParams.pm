@@ -33,15 +33,15 @@ our $VERSION = '0.1';
     # get all params
     my @params = $thingy->param(); # @params == ('veggie')
     
+    # clone a Object::WithParams
+    my $doodad = $thingy->clone; # $doodad->param('veggie') == 'tomato'
+
     # delete a param
     $thingy->delete('veggie');
     
     # delete all params
     $thingy->clear();
     
-    # clone a Object::WithParams
-    my $doodad = $thingy->clone; # $doodad->param('veggie') == 'tomato'
-
 =head1 DESCRIPTION
 
 Use this module to create objects that do nothing except contain parameters 
@@ -72,7 +72,7 @@ sub new {
 
 Deletes all the extent parameters.  Does not return anything.
 
-    ex. $thingy->clear();
+$thingy->clear();
 
 =cut
 
@@ -91,7 +91,7 @@ sub clear {
 Returns a new L<Object::WithParams> with the same set of parameters as the
 old one.
 
-    ex. my $doodad = $thingy->clone();
+my $doodad = $thingy->clone();
     
 =cut
 
@@ -111,7 +111,7 @@ sub clone {
 
 Delete the named parameter.
 
-    ex. $thingy->delete('veggie');
+$thingy->delete('veggie');
 
 =cut
 
@@ -133,27 +133,31 @@ The C<param> method can be called in three ways.
 
 =item with no arguments.
 
-Returns a list of the parameters contained in the thingy.
+Returns a list of the parameters contained in the object.
 
-    ex. my @params = $thingy->param();
+my @params = $thingy->param();
     
-=item with a scalar argument.
+=item with a single scalar argument.
 
-The value of the param with the name of the argument will be returned.  This
-value could be a scalar or an array.
+The value of the parameter with the name of the argument will be returned.
 
-    ex. my $color = $thingy->param('color');
+my $color = $thingy->param('color');
 
 =item with named arguments
 
 A parameter is created for one or more sets of  keys and values. 
 
-    ex. $thingy->param(filename => 'logo.jpg', height => 50, width => 100);
+$thingy->param(filename => 'logo.jpg', height => 50, width => 100);
 
-The value need not be a scalar, it could be any any sort of reference even a 
-coderef.
+You could also use a hashref.
 
-    ex. $thingy->param(number => &pick_a_random_number);
+my $arg_ref = { filename => 'logo.jpg', height => 50, width => 100 };
+$thingy->param($arg_ref);
+
+The value of a parameter need not be a scalar, it could be any any sort of
+reference even a coderef.
+
+$thingy->param(number => &pick_a_random_number);
 
 Does not return anything.
 
