@@ -149,9 +149,11 @@ A parameter is created for one or more sets of  keys and values.
     ex. $thingy->param(filename => 'logo.jpg', height => 50, width => 100);
 
 The value need not be a scalar, it could be any any sort of reference even a 
-coderef.  Does not return anything.
+coderef.
 
     ex. $thingy->param(number => \&pick_a_random_number);
+
+Does not return anything.
 
 =back
 
