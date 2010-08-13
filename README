@@ -47,13 +47,22 @@ tests or move to another directory.
 
 DEPENDENCIES
 
-This module is pure perl and should work with any version of perl 5.
+This module is pure perl and should work with any version of perl, 5.006 or 
+greater.
 
 The signature can be tested by installing the following module:
 
 Module::Signature
 
 and setting the environment variable TEST_SIGNATURE to 1.
+
+some tests check whether Object::WithParams is compatible with other modules 
+from CPAN.  In order to run these tests, you will need to install the 
+following modules:
+
+Data::FormValidator    3.15
+HTML::Template         2.1
+Test::LongString
 
 Further tests are contained in the xt subdirectory of the distribution.  Only
 the author really needs to run them but if you want to do so as well, you 
