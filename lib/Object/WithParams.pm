@@ -58,6 +58,8 @@ do that in Perl 5.  (Not everyone uses L<Moose>.)
 
 Creates a new, empty L<Object::WithParams>.
 
+my $thingy = Object::WithParams->new;
+
 =cut
 
 sub new {
