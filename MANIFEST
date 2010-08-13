@@ -7,6 +7,7 @@ README
 lib/Object/WithParams.pm
 t/00-signature.t
 t/01-load.t
+t/html-template.t
 t/params.t
 xt/distmanifest.t
 xt/hasversion.t
