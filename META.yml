@@ -19,5 +19,7 @@ provides:
 requires:
   perl: 5.006
 resources:
+  homepage: http://jaldhar.github.com/Object-WithParams
   license: http://dev.perl.org/licenses/
+  repository: http://github.com/jaldhar/Object-WithParams
 version: 0.1

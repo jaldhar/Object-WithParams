@@ -16,6 +16,12 @@ my $builder = Module::Build->new(
     add_to_cleanup      => [ 'Object-WithParams-*' ],
     create_makefile_pl  => 'small',
     sign                => 1,
+    meta_merge => {
+        resources => {
+            repository  => 'http://github.com/jaldhar/Object-WithParams',
+            homepage    => 'http://jaldhar.github.com/Object-WithParams',
+        },
+    },
 );
 
 $builder->create_build_script();
