@@ -1,18 +1,21 @@
 #!/usr/bin/perl
 
 # Test that our object works with Data::FormValidator
-use Test::More tests => 1;
+use Test::More;
 use English qw( -no_match_vars );
 use Object::WithParams;
 use strict;
 use warnings;
 
+plan( tests => 1 );
+
 my @modules = qw/ Data::FormValidator /;
 
 foreach my $module (@modules) {
     eval "use $module";
-    if ( $@ ) {
+    if ( $EVAL_ERROR ) {
         plan( skip_all => "$module not available for testing" );
+        exit 1;
     }
 }
 
