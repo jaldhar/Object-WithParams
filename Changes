@@ -1,5 +1,8 @@
 Revision history for Object::WithParams
 
+0.3     Sun Aug 15 21:48:22 EDT 2010
+        Properly fix test failure when modules are missing.
+
 0.2     Sun Aug 15 00:58:11 EDT 2010
         Fix test failure when modules are missing.
 

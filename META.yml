@@ -15,11 +15,11 @@ name: Object-WithParams
 provides:
   Object::WithParams:
     file: lib/Object/WithParams.pm
-    version: 0.2
+    version: 0.3
 requires:
   perl: 5.006
 resources:
   homepage: http://jaldhar.github.com/Object-WithParams
   license: http://dev.perl.org/licenses/
   repository: http://github.com/jaldhar/Object-WithParams
-version: 0.2
+version: 0.3
