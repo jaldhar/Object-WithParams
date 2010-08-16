@@ -1,0 +1,5 @@
+libobject-withparams-perl (0.3-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Jaldhar H. Vyas <jaldhar@debian.org>  Sun, 15 Aug 2010 22:15:24 -0400
