@@ -7,8 +7,6 @@ use Object::WithParams;
 use strict;
 use warnings;
 
-plan( tests => 1 );
-
 my @modules = qw/ Data::FormValidator /;
 
 foreach my $module (@modules) {
@@ -18,6 +16,8 @@ foreach my $module (@modules) {
         exit 1;
     }
 }
+
+plan( tests => 1 );
 
 my $owp = Object::WithParams->new;
 $owp->param(
